@@ -10,7 +10,8 @@ import {
   MoreHorizontal,
   Edit,
   Trash2,
-  ExternalLink
+  ExternalLink,
+  Package
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -20,7 +21,7 @@ export default function AdminProductsPage() {
 
   const filteredProducts = products.filter(p => 
     p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-    p.categorySlug.toLowerCase().includes(searchTerm.toLowerCase())
+    p.categoryId.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
@@ -95,7 +96,7 @@ export default function AdminProductsPage() {
                   </td>
                   <td className="px-6 py-4">
                     <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cream text-charcoal">
-                      {product.categorySlug.replace('-sarees', '')}
+                      {product.categoryName}
                     </span>
                   </td>
                   <td className="px-6 py-4 font-medium text-charcoal">

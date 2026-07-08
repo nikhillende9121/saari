@@ -6,11 +6,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Vastrika — Handcrafted Sarees | Premium Indian Saree Brand",
-    template: "%s | Vastrika",
+    default: "VR Silks — Premium Indian Saree Brand",
+    template: "%s | VR Silks",
   },
   description:
-    "Discover exquisite handcrafted sarees at Vastrika. Shop premium Banarasi, Kanjivaram, Silk, Cotton, and designer sarees online. Free shipping on orders above ₹2,999.",
+    "Discover exquisite handcrafted sarees at VR Silks. Shop premium Banarasi, Kanjivaram, Silk, Cotton, and designer sarees online. Free shipping on orders above ₹2,999.",
   keywords: [
     "sarees online",
     "buy sarees",
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    siteName: "Vastrika",
-    title: "Vastrika — Handcrafted Sarees | Premium Indian Saree Brand",
+    siteName: "VR Silks",
+    title: "VR Silks — Premium Indian Saree Brand",
     description:
-      "Discover exquisite handcrafted sarees at Vastrika. Shop premium Banarasi, Kanjivaram, Silk, Cotton, and designer sarees online.",
+      "Discover exquisite handcrafted sarees at VR Silks. Shop premium Banarasi, Kanjivaram, Silk, Cotton, and designer sarees online.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vastrika — Handcrafted Sarees",
+    title: "VR Silks — Premium Indian Saree Brand",
     description: "Premium handcrafted sarees from India's finest artisans.",
   },
   robots: {

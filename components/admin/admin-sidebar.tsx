@@ -32,7 +32,7 @@ export function AdminSidebar() {
       <div className="h-16 flex items-center px-6 border-b border-white/10">
         <Link href="/" className="flex items-center gap-2 text-gold hover:text-white transition-colors">
           <Store className="w-5 h-5" />
-          <span className="font-heading font-bold text-xl tracking-wide uppercase">Vastrika</span>
+          <span className="font-heading font-bold text-xl tracking-wide uppercase">VR Silks</span>
         </Link>
       </div>
 

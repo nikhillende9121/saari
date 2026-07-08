@@ -58,14 +58,11 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gradient-gold flex items-center justify-center">
-                <span className="text-white font-heading text-xl font-bold">V</span>
+              <div className="flex items-center justify-center pt-1">
+                <span className="text-gold font-heading italic text-4xl font-bold tracking-tighter">VR</span>
               </div>
               <div>
-                <h3 className="text-xl font-heading font-bold text-white tracking-tight">VASTRIKA</h3>
-                <span className="text-[9px] uppercase tracking-[0.25em] text-gold-light">
-                  Handcrafted Elegance
-                </span>
+                <h3 className="text-xl font-heading font-bold text-white tracking-wide mt-1 uppercase">VR Silks</h3>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-white/60 max-w-sm mb-6">
@@ -164,7 +161,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <Container className="py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} Vastrika. All rights reserved. Made with ♥ in India.
+            © {new Date().getFullYear()} VR Silks. All rights reserved. Made with ♥ in India.
           </p>
 
           {/* Payment Icons */}

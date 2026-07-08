@@ -56,16 +56,13 @@ export function Navbar() {
               </button>
 
               <Link href="/" className="flex items-center gap-2 group">
-                <div className="w-9 h-9 rounded-full bg-gradient-gold flex items-center justify-center">
-                  <span className="text-white font-heading text-lg font-bold">V</span>
+                <div className="flex items-center justify-center pt-1">
+                  <span className="text-gold font-heading italic text-4xl font-bold tracking-tighter">VR</span>
                 </div>
                 <div className="hidden sm:block">
-                  <h1 className="text-xl font-heading font-bold text-charcoal tracking-tight leading-none">
-                    VASTRIKA
+                  <h1 className="text-xl font-heading font-bold text-charcoal tracking-wide leading-none mt-1 uppercase">
+                    VR Silks
                   </h1>
-                  <span className="text-[9px] uppercase tracking-[0.25em] text-gold font-medium">
-                    Handcrafted Elegance
-                  </span>
                 </div>
               </Link>
             </div>

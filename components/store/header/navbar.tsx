@@ -61,7 +61,7 @@ export function Navbar() {
                 </div>
                 <div className="hidden sm:block">
                   <h1 className="text-xl font-heading font-bold text-charcoal tracking-wide leading-none mt-1 uppercase">
-                    VR Silks
+                    Silks
                   </h1>
                 </div>
               </Link>
@@ -161,7 +161,7 @@ export function Navbar() {
                     <Link href="/account/orders" className="block px-4 py-2 text-sm text-charcoal hover:bg-cream transition-colors">
                       My Orders
                     </Link>
-                    <button 
+                    <button
                       onClick={() => signOut()}
                       className="w-full text-left px-4 py-2 text-sm text-rose hover:bg-rose/10 transition-colors flex items-center gap-2 mt-1 border-t border-border-light"
                     >

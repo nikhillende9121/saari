@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { collections } from '@/lib/data/mock';
@@ -37,10 +38,13 @@ export function FeaturedCollections() {
                 href={`/collections/${collection.slug}`}
                 className="group block relative h-80 md:h-96 rounded-2xl overflow-hidden"
               >
-                {/* Background gradient */}
-                <div
-                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-110"
-                  style={{ background: collectionColors[i % collectionColors.length] }}
+                {/* Background Image */}
+                <Image 
+                  src={collection.image}
+                  alt={collection.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
                 {/* Overlay */}

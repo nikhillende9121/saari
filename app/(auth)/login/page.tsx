@@ -22,12 +22,13 @@ export default function LoginPage() {
     setLoading(true);
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      router.push('/account'); // Or redirect to intended page
+      // MOCK LOGIN BYPASS
+      setTimeout(() => {
+        router.push('/admin'); // Redirect straight to Admin for demo
+      }, 800);
     } catch (err: any) {
       console.error(err);
       setError(err.message || 'Failed to sign in. Please check your credentials.');
-    } finally {
       setLoading(false);
     }
   };

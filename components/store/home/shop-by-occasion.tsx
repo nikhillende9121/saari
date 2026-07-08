@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { occasions } from '@/lib/data/mock';
@@ -39,11 +40,14 @@ export function ShopByOccasion() {
                 href={`/occasions/${occasion.slug}`}
                 className="group block relative h-48 md:h-60 rounded-xl overflow-hidden"
               >
-                <div
-                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                  style={{ background: occasionGradients[i] }}
+                <Image 
+                  src={occasion.image}
+                  alt={occasion.name}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-charcoal/30 group-hover:bg-charcoal/20 transition-colors" />
+                <div className="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/30 transition-colors" />
 
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
                   <h3 className="text-lg md:text-xl font-heading font-semibold text-white mb-1">

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { promoBanners } from '@/lib/data/mock';
 import { motion } from 'framer-motion';
@@ -23,15 +24,14 @@ export function PromoBanner() {
                 href={banner.ctaLink || '/sale'}
                 className="group block relative h-44 md:h-56 rounded-2xl overflow-hidden"
               >
-                <div
-                  className="absolute inset-0 transition-transform duration-700 group-hover:scale-105"
-                  style={{
-                    background: i === 0
-                      ? 'linear-gradient(135deg, #800020, #c9a94e, #d4a574)'
-                      : 'linear-gradient(135deg, #2d5a3e, #87ceeb, #c9d4a9)',
-                  }}
+                <Image 
+                  src={banner.desktopImage}
+                  alt={banner.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-charcoal/20" />
+                <div className="absolute inset-0 bg-gradient-to-r from-charcoal/80 to-charcoal/10" />
 
                 <div className="absolute inset-0 flex items-center p-8 md:p-10">
                   <div>

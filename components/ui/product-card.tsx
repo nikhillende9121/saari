@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { cn } from '@/lib/utils/cn';
+import Image from 'next/image';
 import { Heart, ShoppingBag, Eye } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Rating } from '@/components/ui/rating';
@@ -34,23 +35,23 @@ export function ProductCard({ product, index = 0, className }: ProductCardProps)
       <Link href={`/products/${product.slug}`} className="block">
         {/* Image Container */}
         <div className="relative overflow-hidden rounded-xl bg-cream aspect-[3/4]">
-          {/* Placeholder gradient for product image */}
-          <div
-            className="absolute inset-0 product-card-img"
-            style={{
-              background: `linear-gradient(135deg, ${product.colorHex}22, ${product.colorHex}44, ${product.colorHex}22)`,
-            }}
-          />
-
-          {/* Overlay with centered product initial */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span
-              className="text-6xl font-heading font-bold opacity-15"
-              style={{ color: product.colorHex }}
-            >
-              {product.name.charAt(0)}
-            </span>
-          </div>
+          {/* Product Image */}
+          {product.images?.[0] ? (
+            <Image
+              src={product.images[0].url}
+              alt={product.images[0].alt || product.name}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              className="object-cover product-card-img"
+            />
+          ) : (
+            <div
+              className="absolute inset-0 product-card-img"
+              style={{
+                background: `linear-gradient(135deg, ${product.colorHex}22, ${product.colorHex}44, ${product.colorHex}22)`,
+              }}
+            />
+          )}
 
           {/* Badges */}
           <div className="absolute top-3 left-3 flex flex-col gap-1.5 z-10">

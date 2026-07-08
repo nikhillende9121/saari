@@ -3,12 +3,12 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils/cn';
-import { 
-  LayoutDashboard, 
-  Package, 
-  ShoppingCart, 
-  Users, 
-  Settings, 
+import {
+  LayoutDashboard,
+  Package,
+  ShoppingCart,
+  Users,
+  Settings,
   LogOut,
   Store
 } from 'lucide-react';
@@ -32,7 +32,7 @@ export function AdminSidebar() {
       <div className="h-16 flex items-center px-6 border-b border-white/10">
         <Link href="/" className="flex items-center gap-2 text-gold hover:text-white transition-colors">
           <Store className="w-5 h-5" />
-          <span className="font-heading font-bold text-xl tracking-wide uppercase">VR Silks</span>
+          <span className="font-heading font-bold text-xl tracking-wide uppercase">Silks</span>
         </Link>
       </div>
 
@@ -45,7 +45,7 @@ export function AdminSidebar() {
           const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
           // Special case for exact match on dashboard
           const isReallyActive = item.href === '/admin' ? pathname === '/admin' : isActive;
-          
+
           return (
             <Link
               key={item.name}

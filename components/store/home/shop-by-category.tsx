@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Container } from '@/components/ui/container';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { categories } from '@/lib/data/mock';
@@ -36,20 +37,14 @@ export function ShopByCategory() {
               >
                 {/* Circle Image */}
                 <div className="relative w-28 h-28 md:w-36 md:h-36 mx-auto mb-4 rounded-full overflow-hidden border-2 border-transparent group-hover:border-gold transition-all duration-300">
-                  <div
-                    className="absolute inset-0 transition-transform duration-500 group-hover:scale-110"
-                    style={{
-                      background: `linear-gradient(135deg, ${categoryGradients[i]}33, ${categoryGradients[i]}66)`,
-                    }}
+                  <Image 
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    sizes="(max-width: 768px) 112px, 144px"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <span
-                      className="text-3xl font-heading font-bold opacity-30"
-                      style={{ color: categoryGradients[i] }}
-                    >
-                      {category.name.charAt(0)}
-                    </span>
-                  </div>
+                  <div className="absolute inset-0 bg-charcoal/10 group-hover:bg-transparent transition-colors duration-300" />
                 </div>
 
                 {/* Name */}

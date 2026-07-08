@@ -23,18 +23,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
 
   useEffect(() => {
-    // Listen for auth state changes
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
+    // MOCK AUTHENTICATION FOR DEMONSTRATION
+    // Since Firebase isn't fully configured yet, we instantly log you in as an Admin.
+    setTimeout(() => {
+      setUser({
+        uid: 'admin-123',
+        email: 'admin@vrsilks.com',
+        displayName: 'Store Admin',
+      } as any);
       setLoading(false);
-    });
-
-    return () => unsubscribe();
+    }, 500);
   }, []);
 
   const signOut = async () => {
     try {
-      await firebaseSignOut(auth);
+      setUser(null);
       router.push('/login');
     } catch (error) {
       console.error('Error signing out:', error);

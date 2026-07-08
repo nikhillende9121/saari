@@ -72,6 +72,8 @@ export function HeroSlider() {
               alt={banner.title}
               fill
               priority
+              quality={100}
+              unoptimized={true}
               className="object-cover object-center"
               sizes="100vw"
             />
